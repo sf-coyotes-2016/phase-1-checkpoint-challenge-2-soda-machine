@@ -20,7 +20,14 @@ class SodaMachine
   end
 
   def cash
-    @cash + 1
+    # soda_name = find_soda(soda_brand)
+    # get_price = @sodas.find do|soda| 
+    # if soda_name == soda 
+    #    soda.price
+    #     end
+    # end
+    # @cash+ get_price.to_i
+     @cash + 1
   end
 
 end

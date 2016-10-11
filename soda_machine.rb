@@ -13,7 +13,11 @@ class SodaMachine
   end
 
   def find_soda(soda_brand)
-    @sodas[0] 
+    @sodas.each do |soda| 
+      if soda_brand == @sodas(soda.brand)
+        return soda
+      end
+    end
   end
 
   def sell(soda_brand)
@@ -21,3 +25,6 @@ class SodaMachine
   end
 
 end
+
+# pepsi = Soda.new({brand: "Pepsi", price: 1.00})
+# p pepsi.brand

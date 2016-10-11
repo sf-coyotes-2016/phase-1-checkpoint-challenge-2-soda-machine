@@ -1,4 +1,4 @@
-class SodaMachine
+class SodaMachine 
   attr_reader :sodas, :cash
 
   def initialize(args = {})
@@ -7,7 +7,7 @@ class SodaMachine
   end
 
   def current_inventory_count
-    @sodas
+    @sodas.count
   end
 
   def find_soda(soda_brand)
@@ -18,11 +18,3 @@ class SodaMachine
 
 end
 
-let (:pepsi) { Soda.new(brand: 'Pepsi', price: 0.65) }
-let (:mountain_dew) { Soda.new(brand: 'Mountain Dew', price: 0.75) }
-let (:coke_zero) { Soda.new(brand: 'Coke Zero', price: 1.00) }
-let (:second_pepsi) { Soda.new(brand: 'Pepsi', price: 0.65) }
-
-let(:soda_machine) { SodaMachine.new(sodas: [pepsi, mountain_dew, coke_zero, second_pepsi], cash: 1.00) }
-
-p soda_machine.current_inventory_count

@@ -1,3 +1,4 @@
+'require pry'
 class SodaMachine
   attr_reader :sodas, :cash
 
@@ -7,9 +8,14 @@ class SodaMachine
   end
 
   def current_inventory_count
+    @sodas.length
   end
 
   def find_soda(soda_brand)
+    matches = @sodas.select do |soda|
+      soda.brand == soda_brand
+    end
+    matches[0]
   end
 
   def sell(soda_brand)

@@ -13,7 +13,7 @@ class SodaMachine
   end
 
   def find_soda(soda_brand)
-
+    @sodas[0]
   end
 
   def sell(soda_brand)

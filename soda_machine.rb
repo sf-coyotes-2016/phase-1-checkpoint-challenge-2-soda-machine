@@ -11,6 +11,11 @@ class SodaMachine
   end
 
   def find_soda(soda_brand)
+    p @sodas[:brand]
+   #  @sodas.each |i|
+   #   if soda_brand == @sodas[:brand]
+   #   end
+   # end
   end
 
   def sell(soda_brand)

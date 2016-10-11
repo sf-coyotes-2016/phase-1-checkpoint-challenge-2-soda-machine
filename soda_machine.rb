@@ -1,4 +1,4 @@
-class SodaMachine
+class SodaMachine 
   attr_reader :sodas, :cash
 
   def initialize(args = {})
@@ -11,6 +11,7 @@ class SodaMachine
   end
 
   def find_soda(soda_brand)
+    self.
   end
 
   def sell(soda_brand)

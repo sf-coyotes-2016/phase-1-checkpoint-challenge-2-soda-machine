@@ -1,4 +1,3 @@
-#require 'soda'
 
 class SodaMachine
   attr_reader :sodas, :cash
@@ -25,16 +24,5 @@ class SodaMachine
     soda = self.find_soda(soda_brand)
     @cash += soda.price
     @sodas.delete(soda)
-
   end
-
 end
-
-
-# Test driver code
-# pepsi = Soda.new(brand: 'Pepsi', price: 0.65)
-# coke = Soda.new(brand: 'Coke', price: 0.60)
-
-# mach = SodaMachine.new(sodas: [pepsi, mountain_dew, coke_zero, second_pepsi], cash: 1.00)
-# p mach
-# p mach.current_inventory_count

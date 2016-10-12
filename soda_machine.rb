@@ -1,7 +1,7 @@
 require_relative 'soda'
 
 class SodaMachine
-  attr_reader :sodas, :cash
+  attr_reader :sodas, :cash, :sold_soda
 
   def initialize(args = {})
     @sodas = args[:sodas]
@@ -22,10 +22,13 @@ class SodaMachine
 
   def sell(soda_brand)
     @sodas.each do |soda|
-       return soda.brand if soda.brand == soda_brand
+       if soda.brand == soda_brand
+        @cash += soda.price
+        @sold_soda = soda
+        @sodas.delete(soda)
+       end
      end
-    return nil
-
+    @sold_soda
   end
 
 end

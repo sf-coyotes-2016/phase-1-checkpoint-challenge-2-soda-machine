@@ -18,7 +18,15 @@ class SodaMachine
 
   def sell(soda_brand)
     soda = find_soda(soda_brand)
-    # cash += soda.price
+    unless soda.nil?
+      take_out_of_inventory(soda)
+      @cash += soda.price
+    end
+    soda
   end
 
+  def take_out_of_inventory(sold_soda)
+    sodas.delete_if { |soda| soda == sold_soda }
+
+  end
 end

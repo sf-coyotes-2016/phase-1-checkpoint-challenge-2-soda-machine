@@ -25,3 +25,4 @@ class SodaMachine
   end
 end
 
+# all tests pass! woohoo!

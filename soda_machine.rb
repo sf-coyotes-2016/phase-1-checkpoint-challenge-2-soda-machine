@@ -1,4 +1,4 @@
-class SodaMachine < Soda
+class SodaMachine 
   attr_reader :sodas, :cash
 
   def initialize(args = {})
@@ -8,24 +8,17 @@ class SodaMachine < Soda
 
   def current_inventory_count
    @sodas.size
-
   end
 
   def find_soda(soda_brand)
-    if soda = @sodas.find {|soda| soda.brand == soda_brand}
-      return soda
-    else nil
-    end
+    @sodas.find {|soda| soda.brand == soda_brand}
   end
 
   def sell(soda_brand)
-    # if @sodas "does not contain this" soda_brand
-    # return nil
-    # elsif
-    return nil if @sodas.find {|soda| soda.brand != soda_brand}
-  
-
-
+    if sold_soda = find_soda(soda_brand)
+    @cash += sold_soda.price 
+    @sodas.delete(sold_soda)
+    else nil
+    end
   end
-
 end

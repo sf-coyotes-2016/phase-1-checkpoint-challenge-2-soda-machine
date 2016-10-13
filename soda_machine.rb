@@ -11,16 +11,19 @@ class SodaMachine
   end
 
   def find_soda(soda_brand)
-    sodas.first
-    # sodas.find {|i| i }
+
+    sodas.find {|soda| soda.brand == soda_brand }
+
   end
 
   def sell(soda_brand)
-
+    sold_soda = find_soda(soda_brand)
+    if sold_soda
+      @cash = cash + sold_soda.price
+    end
+    sodas.delete(sold_soda)
   end
 
 end
 
-#A soda machine will be able to return the number of
-#sodas it contains. This method should be called
-#SodaMachine#current_inventory_count.
+

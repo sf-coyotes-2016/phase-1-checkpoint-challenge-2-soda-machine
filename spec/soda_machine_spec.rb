@@ -1,4 +1,5 @@
 require_relative "spec_helper"
+require 'pry'
 
 describe SodaMachine do
   let (:pepsi) { Soda.new(brand: 'Pepsi', price: 0.65) }
@@ -7,7 +8,6 @@ describe SodaMachine do
   let (:second_pepsi) { Soda.new(brand: 'Pepsi', price: 0.65) }
 
   let(:soda_machine) { SodaMachine.new(sodas: [pepsi, mountain_dew, coke_zero, second_pepsi], cash: 1.00) }
-
   describe "#current_inventory_count", { current_inventory_count: true } do
     it "returns the number of sodas in the machine" do
       expect(soda_machine.current_inventory_count).to eq(4)

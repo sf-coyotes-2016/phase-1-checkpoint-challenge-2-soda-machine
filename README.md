@@ -45,7 +45,7 @@ To run the tests for a specific file, you can use:
 
 
 
-did stuff YAYA!!
+did stuff YAYA!! MORE STUFF
 
 If you would like RSpec to stop running the tests as soon as it executes a
 failing test, you can use the `--fail-fast` option with any of the above
